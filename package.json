@@ -1,0 +1,23 @@
+{
+  "name": "@mmckelvy/diff-arrays",
+  "version": "1.0.0",
+  "description": "Utility for diffing arrays.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+      "*.test.js"
+    ]
+  },
+  "keywords": [
+    "diff",
+    "arrays"
+  ],
+  "author": "Mark McKelvy",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^1.4.1"
+  }
+}
