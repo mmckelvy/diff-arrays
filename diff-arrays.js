@@ -32,7 +32,6 @@ function symmetricDiff(arr1, arr2, prop) {
 * @returns {Array} A new array with the different elements.
 */
 module.exports = function diffArrays(arr1, arr2, { prop, symmetric } = {}) {
-  // Return the simple diff for an array of primitives.
   if (symmetric) {
     return symmetricDiff(arr1, arr2, prop);
   }
