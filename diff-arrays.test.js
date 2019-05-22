@@ -11,3 +11,22 @@ test('Should diff arrays of primitives', t => {
 
   t.deepEqual(actual, expected);
 });
+
+test('Should diff arrays of objects', t => {
+  const arr1 = [
+    {id: 1, name: 'Joe'},
+    {id: 2, name: 'Bill'},
+    {id: 3, name: 'Jane'},
+  ];
+
+  const arr2 = [
+    {id: 2, name: 'John'},
+    {id: 3, name: 'Frank'},
+    {id: 4, name: 'Linda'},
+  ];
+
+  const actual = diffArrays(arr1, arr2, {prop: 'id'});
+  const expected = [{id: 1, name: 'Joe'}];
+
+  t.deepEqual(actual, expected);
+});
