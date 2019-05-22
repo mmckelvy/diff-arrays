@@ -7,7 +7,7 @@ test('Should diff arrays of primitives', t => {
   const arr2 = [2, 3, 4];
 
   const actual = diffArrays(arr1, arr2);
-  const expected = [1, 4];
+  const expected = [1];
 
   t.deepEqual(actual, expected);
 });
