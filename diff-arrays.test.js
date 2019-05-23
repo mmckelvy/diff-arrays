@@ -25,7 +25,7 @@ test('Should diff arrays of objects', t => {
     {id: 4, name: 'Linda'},
   ];
 
-  const actual = diffArrays(arr1, arr2, {prop: 'id'});
+  const actual = diffArrays(arr1, arr2, {key: 'id'});
   const expected = [{id: 1, name: 'Joe'}];
 
   t.deepEqual(actual, expected);
@@ -54,7 +54,7 @@ test('Should symmetric diff arrays of objects', t => {
     {id: 4, name: 'Linda'},
   ];
 
-  const actual = diffArrays(arr1, arr2, {prop: 'id', symmetric: true});
+  const actual = diffArrays(arr1, arr2, {key: 'id', symmetric: true});
   const expected = [{id: 1, name: 'Joe'}, {id: 4, name: 'Linda'}];
 
   t.deepEqual(actual, expected);
