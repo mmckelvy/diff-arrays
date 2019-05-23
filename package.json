@@ -17,7 +17,8 @@
   },
   "keywords": [
     "diff",
-    "arrays"
+    "arrays",
+    "symmetric difference"
   ],
   "author": "Mark McKelvy",
   "license": "MIT",
