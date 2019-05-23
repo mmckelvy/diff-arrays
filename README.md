@@ -35,3 +35,5 @@ Works with arrays of objects.  Just pass the key on which you want to diff:
     const diffed = diffArrays(arr1, arr2, {key: 'id', symmetric: true});
     console.log(diffed); // [{id: 1, name: 'Joe'}, {id: 4, name: 'Linda'}];
 
+## API
+#### `diffArrays(arr1, arr2, options)`
