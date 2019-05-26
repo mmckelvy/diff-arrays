@@ -41,10 +41,19 @@ When diffing two arrays, order matters.  Suppose we have two arrays:
     const a = [1, 2, 3];
     const b = [2, 3, 4];
 
-`diffArrays(a, b)` will return `[1]`, while `diffArrays(b, a)` will return `[4]`.  Why?  Because in the first case, you are asking "what does "
-
-
-
+`diffArrays(a, b)` will return `[1]`, while `diffArrays(b, a)` will return `[4]`.  Why?  Because in the first case, you are asking "what is in array `a` that is not in array `b`?, while in the second case, you are asking "what is in array `b` that is not in array `a`?  If you are looking for the answer to *both* questions, you are looking for the *symmetric difference*: "what is in array `a` that is not in array `b` *and* what is in array `b` that is not in array `a`."  To accomplish this with `diffArrays`, pass `{symmetric: true}` in the options object.
 
 ## API
 #### diffArrays(arr1, arr2, options)
+`arr1` and `arr2` can be arrays of primitives or objects.  If you pass arrays of objects, include the key you want to use for the diff in the `options` argument: `{key: 'someKey}`.  Returns an array with the diffed elements.
+
+* `arr1 {string[] | number[] | Object[]}`
+* `arr2 {string[] | number[] | Object[]}`
+* `options {Object}`
+* `options.key {string} - The key to use to diff an array of objects.`
+* `options.symmetric {boolean} - Perform a symmetric diff.`
+
+Returns `{string[] | number[] | Object[]}`
+
+## License
+### MIT

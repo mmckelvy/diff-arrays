@@ -23,8 +23,8 @@ function symmetricDiff(arr1, arr2, key) {
 /**
 * Returns the difference between arrays.
 *
-* @param {Array} arr1 - Can be an array of primitives or an array of objects.
-* @param {Array} arr2 - Same as arr1.
+* @param {string[] | number[] | Object[]} arr1 - Can be an array of primitives or an array of objects.
+* @param {string[] | number[] | Object[]} arr2 - Same as arr1.
 * @param {Object} options
 *
 * @param {string} options.key - If diffing an array of objects, the key used for the diffing.

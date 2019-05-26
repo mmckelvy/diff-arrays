@@ -80,3 +80,12 @@ test('Should handle "one-sided" symmetric difference.', t => {
   t.deepEqual(actual, expected);
 });
 
+test('Should work with booleans.', t => {
+  const arr1 = [true, false];
+  const arr2 = [false, false, false];
+
+  const actual = diffArrays(arr1, arr2);
+  const expected = [true];
+
+  t.deepEqual(actual, expected);
+});
