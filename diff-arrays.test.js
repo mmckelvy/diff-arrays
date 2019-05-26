@@ -89,3 +89,14 @@ test('Should work with booleans.', t => {
 
   t.deepEqual(actual, expected);
 });
+
+test('Should throw an error if non-arrays are passed.', t => {
+  const arr1 = 'hello';
+  const arr2 = [2, 3, 4];
+
+  const err = t.throws(() => {
+    diffArrays(arr1, arr2);
+  }, TypeError);
+
+  t.is(err.message, 'Can only diff arrays.');
+});
