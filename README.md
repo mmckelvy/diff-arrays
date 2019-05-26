@@ -57,5 +57,10 @@ If you are looking for the answer to *both* questions, you are looking for the *
 
 Returns `{string[] | number[] | Object[]}`
 
+## Testing
+This module uses [ava](https://github.com/avajs/ava) for testing.  To run the tests, make sure the dev dependencies are installed and then run:
+
+    npm test
+
 ## License
 ### MIT
