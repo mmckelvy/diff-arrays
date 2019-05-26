@@ -33,6 +33,10 @@ function symmetricDiff(arr1, arr2, key) {
 * @returns {Array} A new array with the different elements.
 */
 module.exports = function diffArrays(arr1, arr2, { key, symmetric } = {}) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    throw new Error('Can only diff arrays');
+  }
+
   if (symmetric) {
     return symmetricDiff(arr1, arr2, key);
   }

@@ -59,3 +59,24 @@ test('Should symmetric diff arrays of objects', t => {
 
   t.deepEqual(actual, expected);
 });
+
+test('Should return [] for no difference.', t => {
+  const arr1 = [2, 3];
+  const arr2 = [2, 3, 4];
+
+  const actual = diffArrays(arr1, arr2);
+  const expected = [];
+
+  t.deepEqual(actual, expected);
+});
+
+test('Should handle "one-sided" symmetric difference.', t => {
+  const arr1 = [2, 3];
+  const arr2 = [2, 3, 4];
+
+  const actual = diffArrays(arr1, arr2, {symmetric: true});
+  const expected = [4];
+
+  t.deepEqual(actual, expected);
+});
+

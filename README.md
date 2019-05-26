@@ -35,5 +35,16 @@ Works with arrays of objects.  Just pass the key on which you want to diff:
     const diffed = diffArrays(arr1, arr2, {key: 'id', symmetric: true});
     console.log(diffed); // [{id: 1, name: 'Joe'}, {id: 4, name: 'Linda'}];
 
+## Diffing mechanics and symmetric difference
+When diffing two arrays, order matters.  Suppose we have two arrays:
+
+    const a = [1, 2, 3];
+    const b = [2, 3, 4];
+
+`diffArrays(a, b)` will return `[1]`, while `diffArrays(b, a)` will return `[4]`.  Why?  Because in the first case, you are asking "what does "
+
+
+
+
 ## API
 #### diffArrays(arr1, arr2, options)
